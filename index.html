@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<link
+			rel="stylesheet"
+			href="lib/bootstrap-4.6.0-dist/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="css/sidebar.css" />
+		<link rel="icon" href="favicon.ico" />
+
+		<title>Mateus Pinto da Silva</title>
+	</head>
+
+	<body class="bg-dark text-light" style="height: 100%">
+		<div class="vertical-nav bg-dark" id="sidebar">
+			<ul class="nav flex-column bg-dark mb-0">
+				<div class="py-4 px-3 mb-4 media d-flex align-items-center">
+					<img
+						src="img/mateus.jpg"
+						alt="Foto de Mateus Pinto da Silva"
+						width="250"
+						height="250"
+						class="mr-3 rounded-circle img-thumbnail bg-dark mx-auto d-block"
+					/>
+				</div>
+
+				<li
+					class="nav-item nav-link font-italic hand-link sidebar-hide"
+					id="link-home"
+				>
+					Home
+				</li>
+				<li
+					class="nav-item nav-link font-italic hand-link sidebar-hide"
+					id="link-formacao"
+				>
+					Formação
+				</li>
+				<li
+					class="nav-item nav-link font-italic hand-link sidebar-hide"
+					id="link-hobbies"
+				>
+					Hobbies
+				</li>
+				<li
+					class="nav-item nav-link font-italic hand-link sidebar-hide"
+					id="link-tecnologias"
+				>
+					Tecnologias
+				</li>
+				<li
+					class="nav-item nav-link font-italic hand-link sidebar-hide"
+					id="link-contato"
+				>
+					Contato
+				</li>
+			</ul>
+		</div>
+
+		<div class="page-content" id="content">
+			<nav class="navbar navbar-dark bg-dark justify-content-between">
+				<button type="button" class="btn btn-warning" id="sidebar-show">
+					<img src="svg/sidebar-icon.svg" width="30" height="30" />
+				</button>
+				<h1>Mateus Pinto da Silva</h1>
+
+				<li style="list-style-type: none">
+					<ui>
+						<a href="https://gitlab.com/mateuspinto/" target="_blank">
+							<button
+								class="btn btn-outline-success my-2 my-sm-0"
+								type="submit"
+							>
+								<img src="svg/github.svg" alt="" width="50px" height="50px" />
+							</button>
+						</a>
+					</ui>
+					<ui>
+						<a href="https://gitlab.com/mateuspinto/" target="_blank">
+							<button
+								class="btn btn-outline-success my-2 my-sm-0"
+								type="submit"
+							>
+								<img src="svg/gitlab.svg" alt="" width="50px" height="50px" />
+							</button>
+						</a>
+					</ui>
+				</li>
+			</nav>
+			<div id="page" class="sidebar-hide p-5" style="height: 100%"></div>
+		</div>
+		<footer class="page-footer font-small pt-4">
+			<div class="footer-copyright text-center py-3">
+				© Desenvolvido por Mateus Pinto da Silva - Setembro de 2021
+			</div>
+		</footer>
+
+		<script src="lib/jquerry-3.6.0/jquery-3.6.0.min.js"></script>
+		<script src="lib/bootstrap-4.6.0-dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			const openHome = () => $("#page").load("html/home.html");
+
+			$(document).ready(openHome);
+
+			$("#link-home").click(openHome);
+			$("#link-formacao").click(() => $("#page").load("html/formacao.html"));
+			$("#link-hobbies").click(() => $("#page").load("html/hobbies.html"));
+
+			$("#link-tecnologias").click(() =>
+				$("#page").load("html/tecnologias.html")
+			);
+			$("#link-contato").click(() => $("#page").load("html/contato.html"));
+
+			$("#sidebar-show").click(function () {
+				$("#sidebar").toggleClass("active", true);
+				$("#content").toggleClass("active", true);
+			});
+			$(".sidebar-hide").click(function () {
+				$("#sidebar").toggleClass("active", false);
+				$("#content").toggleClass("active", false);
+			});
+		</script>
+	</body>
+</html>
