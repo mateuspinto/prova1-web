@@ -2,5 +2,50 @@
 <html lang="pt-BR">
 	<body>
 		<h2>Contato</h2>
+		<br />
+		<br />
+
+		<form
+			action="mailto:mateus.p.silva@ufv.br"
+			method="post"
+			enctype="text/plain"
+		>
+			Seu Nome:<br />
+			<input type="text" name="name" size="50" /><br />
+			Seu Email:<br />
+			<input type="text" name="mail" size="50 " /><br />
+
+			<p>
+				<label>Conteúdo da mensagem</label><br />
+				<select>
+					<option>Sugestão</option>
+					<option>Pedido de consultoria</option>
+					<option>Oferta de trabalho</option>
+					<option>Esquema de Pirâmide</option>
+				</select>
+			</p>
+			<p>
+				<label>Você gostou do meu portfólio?</label><br />
+				<label>
+					<input type="radio" name="gostou" value="sim" required />
+					Sim
+				</label>
+				<label>
+					<input type="radio" name="gostou" value="nao" required />
+					Não
+				</label>
+			</p>
+
+			Sua mensagem:<br />
+			<input
+				type="text"
+				name="message"
+				size="100"
+				style="line-height: 200px"
+			/><br /><br />
+
+			<input type="submit" value="Enviar" />
+			<input type="reset" value="Resetar" />
+		</form>
 	</body>
 </html>
